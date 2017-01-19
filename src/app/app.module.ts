@@ -9,7 +9,9 @@ import { AboutComponent } from './container/about/about.component';
 
 import { SearchBarComponent } from './presentational/search-bar/search-bar.component';
 
-import { ApiService } from './shared';
+import { ApiService, TalkService } from './shared';
+import { TalkAction } from './actions';
+
 import { routing } from './app.routing';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
@@ -28,7 +30,9 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     SearchBarComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    TalkService,
+    TalkAction
   ],
   bootstrap: [AppComponent]
 })
