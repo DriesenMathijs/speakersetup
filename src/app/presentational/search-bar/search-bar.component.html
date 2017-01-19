@@ -1,0 +1,19 @@
+<!--<div class="row">
+    <div class="col-md-6 offset-md-3 input-group">
+        <input type="text" class="form-control" placeholder="Search..." placeholder="{{searchPlaceholder}}" [(ngModel)]="searchTerm" >
+        <input type="button" class="btn btn-secondary padd" type="button" (click)="onSearchClicked()" value="Search" />
+    </div>
+</div>-->
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <div class="InputAddOn">
+            <input class="InputAddOn-field" placeholder="Search..." placeholder="{{searchPlaceholder}}" [(ngModel)]="searchTerm">
+            <button class="InputAddOn-item btn-default" (click)="onSearchClicked()">Search</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1>{{searchTerm}}</h1>
+    </div>
+</div>
