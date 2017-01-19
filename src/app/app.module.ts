@@ -6,10 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './container/home/home.component';
 import { AboutComponent } from './container/about/about.component';
+import { SearchTalkComponent } from './container/search-talk/search-talk.component';
 
 import { SearchBarComponent } from './presentational/search-bar/search-bar.component';
+import { SearchTalkResultComponent } from './presentational/search-talk-result/search-talk-result.component';
 
-import { ApiService, TalkService } from './shared';
+import { TalkService } from './shared';
 import { TalkAction } from './actions';
 
 import { routing } from './app.routing';
@@ -27,10 +29,11 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    SearchBarComponent
+    SearchTalkComponent,
+    SearchBarComponent,
+    SearchTalkResultComponent
   ],
   providers: [
-    ApiService,
     TalkService,
     TalkAction
   ],

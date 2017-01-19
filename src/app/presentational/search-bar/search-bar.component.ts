@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { TalkAction } from '../../actions';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'rsm-search-bar',
@@ -7,22 +6,19 @@ import { TalkAction } from '../../actions';
     styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
-    searchPlaceholder: string;
+    @Input() searchPlaceholder: string;
     searchTerm: string;
-    result: string[];
 
-    constructor(private talkAction: TalkAction) {
-        
+    @Output() notify: EventEmitter<string> = new EventEmitter<string>();
+
+    constructor() {
+
     }
 
     ngOnInit() {
-        console.log('Hello from the search bar');
-        this.searchPlaceholder = "Search...";
     }
 
     onSearchClicked() {
-        console.log(this.searchTerm);
-        this.result = this.talkAction.getSearchTalks("talk");
-        alert(this.result[0]);
+        this.notify.emit(this.searchTerm);
     }
 }

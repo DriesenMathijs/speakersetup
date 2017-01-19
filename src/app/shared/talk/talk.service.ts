@@ -8,7 +8,7 @@ const TALKS: string[] = [
 
 @Injectable()
 export class TalkService {
-
+    title = 'Angular 2';
 
     constructor() {
 

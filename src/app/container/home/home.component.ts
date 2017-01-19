@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TalkAction } from '../../actions';
 
 @Component({
   selector: 'rsm-home',
@@ -8,12 +7,10 @@ import { TalkAction } from '../../actions';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private talkAction: TalkAction) {
+  constructor() {
     // Do stuff
   }
 
   ngOnInit() {
-    console.log('Hello Home');
   }
-
 }
